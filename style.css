@@ -58,9 +58,17 @@ body {
 .back-content {
     width: 100%;
     height: 100%;
+    padding: 30px; /* aumenta el margen interno */
+    font-size: 18px;
+    color: #b03e57;
+    text-align: left; /* justifica el texto largo */
+    line-height: 1.6; /* mejora el espaciado entre líneas */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-y: auto; /* permite hacer scroll si el texto es MUY largo */
+    gap: 10px
 }
 
 .back-content{
@@ -145,3 +153,4 @@ i {
     opacity: 0;
   }
 }
+
