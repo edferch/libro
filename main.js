@@ -80,3 +80,25 @@ function goPrevPage() {
         currentLocation--;
     }
 }
+
+// Corazones flotantes 💖
+const container = document.createElement("div");
+container.classList.add("floating-hearts");
+document.body.appendChild(container);
+
+function createHeart() {
+  const heart = document.createElement('span');
+  heart.innerText = ['💖', '💗', '💘', '❤️', '💕'][Math.floor(Math.random() * 5)];
+  heart.style.position = 'absolute';
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.animation = `float ${Math.random() * 3 + 3}s linear`;
+  heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+  heart.style.opacity = 0.8;
+  container.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}
+
+setInterval(createHeart, 300);
